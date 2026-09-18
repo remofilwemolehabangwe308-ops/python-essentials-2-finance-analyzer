@@ -1,7 +1,7 @@
 # Python Finance Transaction Analyzer
 
 ## Description
-The Personal Finance Transaction Analyser is the python application thata reads the messy bank statement, cleans and validates transaction data, tracks running balances, analyses income and expenses by category, detects duplicate and unusual transactions, and generates a monthly summary report.This project aims to use concepts such as OOP, generators, closures, exception handling, file handling, and modules in Python Standard Library, all within the framework of the challenges of safely working with messy real-world data.
+The Personal Finance Transaction Analyser is the Python application that reads the messy bank statement, cleans and validates transaction data, tracks running balances, analyses income and expenses by category, detects duplicate and unusual transactions, and generates a monthly summary report.This project aims to use concepts such as OOP, generators, closures, exception handling, file handling, and modules in Python Standard Library, all within the framework of the challenges of safely working with messy real-world data.
 
 **Author:** Remofilwe Molehabangwe
 **Cohort:** Data Science Practitioner, Jan 2026 - Melsoft Academy
@@ -21,16 +21,16 @@ The Personal Finance Transaction Analyser is the python application thata reads 
 1. Clone the repository.
 2. Open the project folder in the terminal.
 3. Install the requirements if needed: pip install -r requirements.txt
-4. Run the program: "python main.py"
-5. Run the program: "python tests.py"
+4. Run the program: /python main.py``
+5. Run the program: /python tests.py``
 
 ## Project Structure
-1. models.py: Transaction classes
-2. parser.py: generates, loads, clean and validates transaction data
-3. analytics.py: running balance, categories, duplicates and outliers
-4. reporting.py: creates the monthly report and activity log
-5. tests.py: tests the different functions
-6. main.py: menu and connects everything together
+1. models.py - Transaction classes
+2. parser.py - generates, loads, clean and validates transaction data
+3. analytics.py - running balance, categories, duplicates and outliers
+4. reporting.py - creates the monthly report and activity log
+5. tests.py - tests the different functions
+6. main.py - menu and connects everything together
 
 ## Concepts Demonstrated
 This project demonstrates:
@@ -38,7 +38,7 @@ This project demonstrates:
 - File handling and data processing
 - String cleaning and data validation
 - Exception handling with (try-except)
-- Generators using yields
+- Generators using yield
 - Closures
 - Sets and tuples for duplicate detection
 - Statistical calculations using mean and standard deviation
@@ -50,11 +50,11 @@ The analyser is designed to safely handle:
 - Missing fields or too few fields
 - Completely invalid or junk lines
 - Non-numeric transaction amounts
-- Duplicates transactions
+- Duplicate transactions
 - Income and expenses sign/category mismatches
 - Empty statement files
-- Missing statement in files
-- Extra whitespaces in transaction data
+- Missing statement files
+- Extra whitespace in transaction data
 
 ## Sample Output
 === Personal Finance Transaction Analyzer ===
