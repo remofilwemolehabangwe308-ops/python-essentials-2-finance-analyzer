@@ -1,7 +1,7 @@
 import statistics
 
-def running_balance(transactions):
-    balance = 0
+def running_balance(transactions, start=0.0):
+    balance = start
     for transaction in transactions:
         balance += transaction.amount
         yield balance 
