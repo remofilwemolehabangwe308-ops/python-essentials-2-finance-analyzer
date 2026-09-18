@@ -8,7 +8,7 @@ from analytics import category_totals
 
 def monthly_summary(valid_transactions, rejections):
     with open("data/report.txt", "w") as file:
-        file.write("===== Personal Finance Transaction Report =====\n")
+        file.write("===== PERSONAL FINANCE TRANSACTION REPORT =====\n")
         total_of_categories = category_totals(valid_transactions) 
         duplicates = find_duplicates(valid_transactions)
         outliers = find_outliers(valid_transactions)
@@ -29,21 +29,31 @@ def monthly_summary(valid_transactions, rejections):
         today = datetime.datetime.now()
         formatted_date = today.strftime("%A, %d %B %Y")
 
-        file.write(f"Total Amount: {total_amount}\n")
+        file.write("=== Total Amount ===\n")
+        file.write(f"{total_amount}\n")
 
-        file.write("=== Duplicates ===")
+        file.write("=== Duplicates ===\n")
         for transaction in duplicates:
           file.write(f"{transaction}\n")
 
-        file.write("=== Outliers ===")
+        file.write("=== Outliers ===\n")
         for transaction in outliers:
             file.write(f"{transaction}\n")
 
-        file.write(f"Rejected rows: {rejected_rows}\n")
+        file.write("=== Rejected rows ===\n")
+        file.write(f"{rejected_rows}\n")
 
+        file.write("=== Income ===\n")
         for category, amount in total_of_categories.items():
-            file.write(f"Category: {category}\n")
-            file.write(f"Amount: {amount}\n")
+            if category == "Income":
+              file.write(f"Category: {category}\n")
+              file.write(f"Amount: {amount}\n")
+        
+        file.write("=== Expenses ===\n")
+        for category, amount in total_of_categories.items():
+               if category != "Income":
+                   file.write(f"Category: {category}\n")
+                   file.write(f"Amount: {amount}\n")     
 
         file.write(f"Date: {formatted_date}\n")
         file.write(f"OS name: {os_name}\n")

@@ -73,7 +73,7 @@ def generate_sample_file():
 
             mismatched_transaction2 = f"2026-08-11,School supplies,500,Education"
             file.write(f"{mismatched_transaction2}\n")
-generate_sample_file()
+
 
 def load_transactions(path):
      valid_transactions = []
@@ -123,7 +123,7 @@ def load_transactions(path):
      except FileNotFoundError:
                     rejections.append("No file was found")
      return valid_transactions, rejections                             
-print(load_transactions("data/statement.txt"))
+
              
     
                                   
